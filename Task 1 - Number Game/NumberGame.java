@@ -4,8 +4,8 @@ public class NumberGame {
         Random rd = new Random();
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to the number game!!");
+        System.out.println("This game is to find the randomly generated number,you need to find the correct number within 10 chances. ");
         System.out.println("Enter the number between 1 to 100 to find the correct number");
-        System.out.println("We will provide you 10 chances to find the correct number");
         int random = rd.nextInt(100);
         int flag=0;
         for (int i = 10; i>0; i--)
@@ -21,12 +21,12 @@ public class NumberGame {
                 }
                 else if(guess<random)
                 {
-                    System.out.println("You are too low");
-                    System.out.println(i+" "+"chances are left.");
+                    System.out.print("You are too low...");
+                    System.out.println(i-1+" "+"chances are left.");
                 }
                 else{
                     System.out.println("You are too high");
-                    System.out.println(i+" "+"chances are left.");
+                    System.out.println(i-1+" "+"chances are left.");
                 }
             }
             else {
