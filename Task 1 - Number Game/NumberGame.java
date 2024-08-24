@@ -6,7 +6,7 @@ public class NumberGame {
         System.out.println("Welcome to the number game!!");
         System.out.println("This game is to find the randomly generated number,you need to find the correct number within 10 chances. ");
         System.out.println("Enter the number between 1 to 100 to find the correct number");
-        int random = rd.nextInt(100);
+        int random = rd.nextInt(100)+1;
         int flag=0;
         for (int i = 10; i>0; i--)
         {
@@ -40,6 +40,7 @@ public class NumberGame {
         else
         {
             System.out.println("Out of chances");
+            System.out.println("The correct number was " + random + ".");
             System.out.println("Better luck next time.");
         }
     }
